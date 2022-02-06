@@ -1,0 +1,78 @@
+html {
+   box-sizing: border-box;
+}
+
+*, *::before, *::after {
+   box-sizing: inherit;
+}
+
+body {
+   height: 100%;
+   line-height: 1;
+   font-size: 16px;
+   background-color: #333;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   color: white;
+}
+
+.wrapper {
+   min-height: 100%;
+   padding: 50px;
+
+}
+.block {
+   margin: 0 0 30px 0;
+
+		&__item {
+         margin: 0 0 10px 0;
+		}
+
+		&__title {
+         font-size: inherit;
+         font-family: inherit;
+         color: inherit;
+         width: 100%;
+         text-align: left;
+         font-size: 18px;
+         background-color: transparent;
+         padding: 10px;
+         position: relative;
+         border: none;
+		}
+
+		&__text {
+         padding: 0 10px 10px;
+         line-height: 130%;
+		}
+      &.init .block__title {
+         cursor: pointer;
+         padding: 10px 40px 10px 10px;
+      }
+      &.init .block__title::before,
+      &.init .block__title::after {
+         cursor: pointer;
+         content: "";
+         width: 20px;
+         height: 1px;
+         background-color: #fff;
+         position: absolute;
+         right: 10px;
+         top: 20px;
+         transition: all 0.3s ease;
+      }
+      &.init .block__title::after {
+         transform: rotate(-90deg);
+      }
+      &.init .block__title.active::after {
+         transform: rotate(0deg);
+      }
+}
+.block_1 .block__item {
+   background-color: #77608d;
+}
+.block_2 .block__item {
+   background-color: #794f45;
+}
+.block_3 .block__item {
+   background-color: #7a956b;
+}
